@@ -27,4 +27,12 @@ jobs:
         run: uv sync --locked
 
       - name: Run automated tests
-        run: uv run python -m pytest -v
+        run: uv run --locked python -m pytest -v --junitxml=pytest-report.xml
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: iris-ml-test-report
+          path: pytest-report.xml
+          if-no-files-found: ignore
