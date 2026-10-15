@@ -57,4 +57,9 @@ GitHub Actions automatically installs the dependencies and runs the automated te
 The initial local model run achieved 93% accuracy on 30 test samples. Results are reproducible with the configured random seed.
 
 ## Author
-Add your name here.
+Divy
+
+## Development Workflow
+
+Changes are developed on feature branches, tested using
+GitHub Actions, and merged into main through pull requests.
